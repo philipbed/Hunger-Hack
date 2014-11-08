@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public abstract class Person {
    
    private String name;
@@ -9,23 +8,22 @@ public abstract class Person {
    private int age;
    private char gender;
    private String contactInfo;
-   private ArrayList<Integer> problems;
+   private ArrayList<Integer> situations;
    
-   public Person(String name, String location, int age, char gender) {
+   public Person(String name, String bio, String location, int age, char gender, String contactInfo) {
       
       this.name = name;
-      this.bio = null;
+      this.bio = bio;
       this.location = location;
       this.age = age;
       this.gender = gender;
       this.contactInfo = null;
-      this.problems = null;
+      this.situations = null;
    }
    
    public String getName() {
       
-      return name;
-      get
+      return name;      
    }
    
    public String getBio() {
@@ -63,19 +61,22 @@ public abstract class Person {
       bio = val;
    }
    
-   public void setProblemType(int val) {
+   public void setSituationsType(int val) {
 	      
-	      problems.add(val);
+	      situations.add(val);
 	   }
 	   
-	   public int getProblemType() {
+	   public void getSituationsType() {
 	      
+	      for(Integer objt: situations) {
+	         getSituationsType_as_string(objt);
+	      }
 	      
 	   }
 	   
-	   public String getProblemType_as_string() {
+	   public String getSituationsType_as_string(Integer val) {
 	      
-	      switch(problemType) {
+	      switch(val) {
 	      
 	      case 1:
 	         return "Substance Abuse";
@@ -89,6 +90,7 @@ public abstract class Person {
 	         return "Health Issues";
 	         
 	      }
+	      
 	      return null;
 	      
 	   }

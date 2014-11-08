@@ -13,32 +13,42 @@ public class Resources {
 	private String phone;
 	private String website;
    
-	public Resources(String name, String type, String phone, String website)
-	{
+	public Resources(String name, String type, String phone, String website) {
+	   
 		this.name = name;
 		this.type = type;
 		this.phone = phone;
 		this.website = website;
 	}
 	
-	public String getName()
-	{
+	public String getName() {
+	   
 		return name;
 	}
 	
-	public String getType()
-	{
+	public String getType() {
+	   
 		return type;
 	}
 	
-	public String getPhone()
-	{
+	public String getPhone() {
+	   
 		return phone;
 	}
 	
-	public String getWebsite()
-	{
+	public String getWebsite() {
+	   
 		return website;
 	 }
+	
+	public void getInfo() {
+	   
+	   System.out.println(getName());
+	   System.out.println(getType());
+	   System.out.println(getWebsite());
+	   System.out.println(getPhone());
+	}
+	
+	
 }
 	

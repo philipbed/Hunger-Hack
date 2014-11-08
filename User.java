@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class User extends Person {
 	
-	public User(String name, String location, int age, char gender)
+	public User(String name, String bio, String location, int age, char gender, String contactInfo)
 	{
-		super(name, location, age, gender);
-		this.problems = null
+		super(name, bio, location, age, gender, contactInfo);
+		
 	}
 
 }
