@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 
 public abstract class Person {
    
@@ -7,6 +9,7 @@ public abstract class Person {
    private int age;
    private char gender;
    private String contactInfo;
+   private ArrayList<Integer> problems;
    
    public Person(String name, String location, int age, char gender) {
       
@@ -16,11 +19,13 @@ public abstract class Person {
       this.age = age;
       this.gender = gender;
       this.contactInfo = null;
+      this.problems = null;
    }
    
    public String getName() {
       
       return name;
+      get
    }
    
    public String getBio() {
@@ -58,5 +63,34 @@ public abstract class Person {
       bio = val;
    }
    
+   public void setProblemType(int val) {
+	      
+	      problems.add(val);
+	   }
+	   
+	   public int getProblemType() {
+	      
+	      
+	   }
+	   
+	   public String getProblemType_as_string() {
+	      
+	      switch(problemType) {
+	      
+	      case 1:
+	         return "Substance Abuse";
+	      case 2:
+	         return "Money Management";
+	      case 3:
+	         return "Unemployment";
+	      case 4:
+	         return "Domestic Violence";
+	      case 5:
+	         return "Health Issues";
+	         
+	      }
+	      return null;
+	      
+	   }
    
 }
