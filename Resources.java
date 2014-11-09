@@ -7,14 +7,20 @@ public class Resources {
 	private String phone;
 	private String website;
 	private String location;
+	private float donationMoney;
+	private boolean needHelp;
 	public ArrayList<User> volunteers;
+	public ArrayList<Donation> foodDonations = new ArrayList<Donation>();
+	public ArrayList<Donation> clothesDonations = new ArrayList<Donation>();
 	
-	public Resources(String name, String type, String phone, String website)
+	public Resources(String name, String type, String location, String phone, String website)
 	{
 		this.name = name;
 		this.type = type;
+		this.location = location;
 		this.phone = phone;
 		this.website = website;
+		this.donationMoney = 0;
 	}
 	
 	public String getName() {
@@ -42,6 +48,21 @@ public class Resources {
 		return location;
 	}
 	
+	public float getDonationMoney() {
+		
+		return donationMoney;
+	}
+	
+	public void addDonationMoney(float val) {
+		
+		donationMoney += val;
+	}
+	
+	public boolean helpNeeded() {
+		
+		return needHelp;
+	}
+	
 	public void getInformation() {
 		
 		System.out.println(getName());
@@ -55,4 +76,20 @@ public class Resources {
 
 		userList.add(volunteer);
 	}
+	
+	public void addFoodDonation(ArrayList<Donation> foodDonations, Donation good) {
+		
+		foodDonations.add(good);
+	}
+	
+	public void addClothingDonation(ArrayList<Donation> clothesDonations, Donation good) {
+		
+		clothesDonations.add(good);
+	}
+	
+	public void askForHelp() {
+		
+		needHelp = true;
+	}
+	
 }

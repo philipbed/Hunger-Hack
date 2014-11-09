@@ -108,26 +108,16 @@ public class Execution {
 		String contactInfo = input.nextLine();
 		System.out.print('\n');
 		
-		User userName = new User(name, bio, location, Integer.valueOf(age), Character.valueOf(gender.charAt(0)) , contactInfo);
+		User currentUser = new User(name, bio, location, Integer.valueOf(age), Character.valueOf(gender.charAt(0)) , contactInfo);
 		
 		for(String obj: situations) {
 		   
-		   userName.setSituationsType(Integer.valueOf(obj));
+		   currentUser.setSituationsType(Integer.valueOf(obj));
 		}
 		
-		userName.getPeers(peersList);
+		currentUser.getPeers(peersList);
 		String lookUp = new String();
-		userName.getResources(resourceList, lookUp);
-		
-		
-		
-//		System.out.println(userName.getName());
-//		System.out.println(userName.getBio());
-//		System.out.println(userName.getLocation());
-//		System.out.println(userName.getAge());
-//		System.out.println(userName.getGender());
-//		System.out.println(userName.getContactInfo());
-		
+		currentUser.getResources(resourceList, lookUp);
 		
 	}
 }
