@@ -23,8 +23,38 @@ public class User extends Person {
 	      	      
 	   }
 	   
-	   for(Peer )
+	   for(Peer person: listToReturn) {
+		   System.out.println("People who have been through the same things\n");
+		   person.tellStory();
+	   }
 	   
+	}
+	
+	public void donate(Donation good, ArrayList<Donation> donationList) {
+		
+		donationList.add(good);
+	
+	}
+	
+	public void getResources(ArrayList<Resources> listOfResources, String lookUp) {
+		
+		ArrayList<Resources> listToReturn = new ArrayList<Resources>();
+		
+		
+		for (Resources resource: listOfResources){
+			
+			if (resource.getType().contentEquals(lookUp))
+				listToReturn.add(resource);
+			else
+				continue;
+			
+		}
+		for (Resources obj: listToReturn){
+			
+			obj.getInformation();
+			
+		}
+		
 	}
 
 }

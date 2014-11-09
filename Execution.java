@@ -42,12 +42,16 @@ public class Execution {
 		      for(String obj: sits) {
 
 		         if(obj.contentEquals("Substance Abuse"))
+		        	
 		            peersList.get(peersList.size() - 1).setSituationsType(1);
 		         else if(obj.contentEquals("Money Management"))
+		        	 
 		            peersList.get(peersList.size() - 1).setSituationsType(2);
 		         else if(obj.contentEquals("Unemployment"))
+		        	
 		            peersList.get(peersList.size() - 1).setSituationsType(3);
 		         else if(obj.contentEquals("Domestic Violence"))
+
 		            peersList.get(peersList.size() - 1).setSituationsType(4);
 		         else if(obj.contentEquals("Health Issues"))
 		            peersList.get(peersList.size() - 1).setSituationsType(5);
@@ -111,12 +115,18 @@ public class Execution {
 		   userName.setSituationsType(Integer.valueOf(obj));
 		}
 		
-		System.out.println(userName.getName());
-		System.out.println(userName.getBio());
-		System.out.println(userName.getLocation());
-		System.out.println(userName.getAge());
-		System.out.println(userName.getGender());
-		System.out.println(userName.getContactInfo());
+		userName.getPeers(peersList);
+		String lookUp = new String();
+		userName.getResources(resourceList, lookUp);
+		
+		
+		
+//		System.out.println(userName.getName());
+//		System.out.println(userName.getBio());
+//		System.out.println(userName.getLocation());
+//		System.out.println(userName.getAge());
+//		System.out.println(userName.getGender());
+//		System.out.println(userName.getContactInfo());
 		
 		
 	}
