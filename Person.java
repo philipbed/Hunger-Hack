@@ -8,7 +8,7 @@ public abstract class Person {
    private int age;
    private char gender;
    private String contactInfo;
-   private ArrayList<Integer> situations;
+   public ArrayList<Integer> situations;
    
    public Person(String name, String bio, String location, int age, char gender, String contactInfo) {
       
@@ -17,8 +17,9 @@ public abstract class Person {
       this.location = location;
       this.age = age;
       this.gender = gender;
-      this.contactInfo = null;
-      this.situations = null;
+      this.contactInfo = contactInfo;
+      this.situations = new ArrayList<Integer>();
+     
    }
    
    public String getName() {

@@ -13,7 +13,7 @@ public class Peer extends Person {
       System.out.print(getGender() + ", " + getAge());
       System.out.println("\n" + getLocation());
       System.out.println(getContactInfo());
-      System.out.println("\n\n" + getBio());
+      System.out.println(getBio() + "\n");
           
    }
 
